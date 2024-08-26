@@ -1,8 +1,12 @@
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from the .env file
+load_dotenv()
 
 
 class Config:
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "sk-proj-swG6WDiaeGg7zbdnBv2YT3BlbkFJFS0GuPGIEViys7FqdLNl")
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     EXCEL_FILE_PATH = "D:\\EmbeddingClassification\\MedicalCards_with_embeddings.csv"
 
 
